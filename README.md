@@ -15,6 +15,11 @@ Internship Project: JSON comparison prograon in Python 3, still in development s
 6. save new json over old json 'hcl' file
 7. catch a few common errors
 
+!!! _PLEASE NOTE_ !!!  
+each time you run this script you
+will OVERWRITE the 'json_old.hcl'
+file PERMANENTLY, no undo here :)
+
 ##Changelog
 
 - v Beta-1-0-2: Initial commit for development testing and user feedback
