@@ -1,5 +1,5 @@
 # JSON-comparison-prototype
-Internship Project: JSON comparison prograon in Python 3, still in development stage
+Internship Project: JSON comparison prograon in Python 3, still in development stage, not set up for public use yet
 
 <!-- ![Downloads](https://img.shields.io/pypi/dm/deepdiff.svg?style=flat) -->
 ![Python Versions](https://img.shields.io/badge/Python-3.2%2C%203.3%2C%203.4%2C%203.5-brightgreen.svg?style=flat)
@@ -16,9 +16,7 @@ Internship Project: JSON comparison prograon in Python 3, still in development s
 7. catch a few common errors
 
 !!! _PLEASE NOTE_ !!!  
-each time you run this script you
-will OVERWRITE the 'json_old.hcl'
-file PERMANENTLY, no undo here :)
+each time you run this script you will OVERWRITE the 'json_old.hcl' file PERMANENTLY, no undo here :)
 
 ##Changelog
 
