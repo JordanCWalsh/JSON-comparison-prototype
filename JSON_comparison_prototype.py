@@ -11,6 +11,7 @@ This prototype is designed to:
 5. save any changes to csv file
 6. save new json over old json 'hcl' file
 7. catch a few common errors
+8. use parameters set by command-line arguments OR default to variables initialized in the code
 
 
 ...my file-nameing convention (MUST name files this way)
@@ -40,11 +41,11 @@ def get_args():
     parser = argparse.ArgumentParser(
         description='Script prints csv of new supported hardware for VMware product')
     parser.add_argument(
-        '-o', '--oldPath', type=str, help='OldPath file', required=False)
+        '-o', '--oldPath', type=str, help='OldPath file', required=True)
     parser.add_argument(
-        '-u', '--urlAddress', type=str, help='UrlAddress json', required=False)
+        '-u', '--urlAddress', type=str, help='UrlAddress json', required=True)
     parser.add_argument(
-        '-c', '--CSVpath', type=str, help='CSVpath file', required=False)
+        '-c', '--CSVpath', type=str, help='CSVpath file', required=True)
     parser.add_argument(
         '-l', '--consoleLog', type=str, help='ConsoleLog log', required=False)
     # Array for all arguments passed to script
@@ -214,10 +215,6 @@ try:
                     if( str(header) in keysListMaster ):        # append values for matching headers
                         klmIndex = keysListMaster.index(str(header))
                         csvrow[klmIndex] = value
-                    else: 
-                        print("no match _ object's key was not in list of column headers")
-                        logFile.write("while printing new csv rows, encouterned following error...\n"
-                                      +"no match _ object's key was not in list of column headers\n")
                     
                 # now print this device's csvrow to the csv file
                 if(len(csvrow) > 0):
